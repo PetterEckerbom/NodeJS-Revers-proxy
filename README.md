@@ -35,7 +35,7 @@ if(host.indexOf("projectsbp") != -1){
 		apiProxy.web(req, res, {target: ninja});
 	}
 ```
-Here you need to change the indexOf part to a defining part of your domain, It does not have to be all of it. You also need to change the target of the calls to the specific server paths you defined above. If you have less servers you simply remove the exess ifelse statements and if you have more you can add additional statements without problems.
+Here you need to change the indexOf part to a defining part of your domain, It does not have to be all of it. You also need to change the target of the calls to the specific server paths you defined above. If you have less servers you simply remove the excess ifelse statements and if you have more you can add additional statements without problems.
 
 ---
 # Disclaimer
