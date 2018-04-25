@@ -14,29 +14,16 @@ You can easily use the same code in this short project to create a proxy server 
 3. [vergetracker.info](http://www.vergetracker.info)
 4. [ninja-stick.com](http://www.ninja-stick.com)
 ---
-In order to edit this to work for your own servers you must change this:
+In order to edit this to work for your own servers change this object at the top of app.js:
 ```sh
-var projectsbp = 'http://localhost:3000',
-    utomhusservice = 'http://localhost:4000',
-    vergetracker = 'http://localhost:5000',
-	ninja = 'http://localhost:7000';
+var locations= {
+	projectsbp: 'http://localhost:3000',
+	utomhusservice: 'http://localhost:4000',
+	vergetracker: 'http://localhost:5000',
+	ninja : 'http://localhost:7000'
+}
 ```
-To include the paths and ports of your servers, you can have more or less than 4 of them and can name them however you want.
-
-You also need to change these if and ifElse statements:
-```sh
-if(host.indexOf("projectsbp") != -1){
-		apiProxy.web(req, res, {target: projectsbp});
-	}else if(host.indexOf("utomhusservice") != -1){
-		apiProxy.web(req, res, {target: utomhusservice});
-	}else if(host.indexOf("vergetracker") != -1){
-		apiProxy.web(req, res, {target: vergetracker});
-	}else if(host.indexOf("ninja") != -1){
-		apiProxy.web(req, res, {target: ninja});
-	}
-```
-Here you need to change the indexOf part to a defining part of your domain, It does not have to be all of it. You also need to change the target of the calls to the specific server paths you defined above. If you have less servers you simply remove the excess elseif statements and if you have more you can add additional statements without problems.
-
+To include the paths and ports of your servers, you can have more or less than 4 of them. You need to make the name of each path a defining part of each domain, if you have a lot of domains that are simular you will have to make the name more specific. In my case they are pretty unique so I only use parts of each host
 ---
 # Disclaimer
 Often times the term "Revers proxy" is used to describe a server that lets a you pull data from several servers at the same time for faster responses. **This is not that kind of server**. Each call is sent to only one other server. This server simply allows you to access multible servers on the same network through diffrent domains.
