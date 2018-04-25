@@ -5,11 +5,11 @@ const apiProxy = httpProxy.createProxyServer();
 
 //Below are all the paths and ports to the diffrent servers that the calls should be rerouted to
 var locations= {
-    projectsbp: 'http://localhost:3000',
-    utomhusservice: 'http://localhost:4000',
-    vergetracker: 'http://localhost:5000',
-	  ninja : 'http://localhost:7000'
-  }
+	projectsbp: 'http://localhost:3000',
+	utomhusservice: 'http://localhost:4000',
+	vergetracker: 'http://localhost:5000',
+	ninja : 'http://localhost:7000'
+}
 
   //Here all types of calls (GET , POST etc)	get handled
   app.all("/*", function(req, res) {
