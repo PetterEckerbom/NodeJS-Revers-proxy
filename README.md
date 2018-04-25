@@ -23,7 +23,8 @@ var locations= {
 	ninja : 'http://localhost:7000'
 }
 ```
-To include the paths and ports of your servers, you can have more or less than 4 of them. You need to make the name of each path a defining part of each domain, if you have a lot of domains that are simular you will have to make the name more specific. In my case they are pretty unique so I only use parts of each host
+I should include the paths and ports of your servers, you can have more or less than 4 of them. You need to make the name of each path a defining part of each domain, if you have a lot of domains that are simular you will have to make the name more specific. In my case they are pretty unique so I only use parts of each host
+
 ---
 # Disclaimer
 Often times the term "Revers proxy" is used to describe a server that lets a you pull data from several servers at the same time for faster responses. **This is not that kind of server**. Each call is sent to only one other server. This server simply allows you to access multible servers on the same network through diffrent domains.
